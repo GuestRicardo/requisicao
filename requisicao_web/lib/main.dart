@@ -2,7 +2,9 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  final future = http.get(Uri.https('www.example.com', '/'));
+  //identficador da url(esta sendo separado para poder editar quando preciso)
+  final uri = Uri.https('www.example.com', '/');
+  final future = http.get(uri);
 //resposta e forma de tratamento do codigo com resposta
   future.then((response) {
     if (response.statusCode == 200) {
