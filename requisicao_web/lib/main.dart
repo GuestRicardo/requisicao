@@ -2,8 +2,10 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  //identficador da url(esta sendo separado para poder editar quando preciso)
+  //construindo a url(esta sendo separado para poder editar quando preciso)
   final uri = Uri.https('www.example.com', '/');
+  //abaixo esta sendo feito uma busca
+  final uri2 = Uri.https('www.example.com', '/api', {'q': 'flutter'});
   //vendo o q esta sendo construindo a sua url
   print(uri);
   final future = http.get(uri);
