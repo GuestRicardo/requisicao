@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 void main() async {
   //identficador da url(esta sendo separado para poder editar quando preciso)
   final uri = Uri.https('www.example.com', '/');
+  //vendo o q esta sendo construindo a sua url
+  print(uri);
   final future = http.get(uri);
 //resposta e forma de tratamento do codigo com resposta
   future.then((response) {
