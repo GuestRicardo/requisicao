@@ -6,7 +6,7 @@ void main() async {
 
   future.then((response) {
     if (response.statusCode == 200) {
-      print('Pagina carregada com sucesso(codigo 200 é pagina em ok)');
+      print('Pagina carregada com sucesso(codigo 200)');
     }
     if (response.statusCode == 301) {
       print('Pagina movida permanentemente(codigo 301)');
