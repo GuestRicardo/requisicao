@@ -22,6 +22,5 @@ void main() async {
   //para obter mais informações no tratamento pode se usar o catchError
   future.catchError((onError) => print('Erro'));
 //agora o tratamento se deu tudo certo, esta tudo ok e sera carregado
-  future.whenComplete(
-      () => print('Tudo certo, pagina carregada(future completo)'));
+  future.whenComplete(() => print('pagina carregada(future completo)'));
 }
