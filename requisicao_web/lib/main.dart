@@ -5,7 +5,8 @@ void main() async {
   //construindo a url(esta sendo separado para poder editar quando preciso)
   final uri = Uri.https('www.example.com', '/');
   //abaixo esta sendo feito uma busca
-  final uri2 = Uri.https('www.example.com', '/api', {'q': 'flutter'});
+  final uri2 = Uri.https(
+      'www.example.com', '/api', {'q': 'flutter', 'parametro': "valor2"});
   //vendo o q esta sendo construindo a sua url
   print(uri);
   final future = http.get(uri);
