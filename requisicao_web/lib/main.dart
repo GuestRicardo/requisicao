@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 void main() async {
   final future = http.get(Uri.https('www.example.com', '/'));
-
+//forma de tratamento
   future.then((response) {
     if (response.statusCode == 200) {
       print('Pagina carregada com sucesso(codigo 200)');
@@ -18,4 +18,6 @@ void main() async {
       print('erro interno no SERVIDOR(codigo 500)');
     }
   });
+  //para obter mais informações no tratamento pode se usar o catchError
+  future.catchError((onError) => print('Erro'));
 }
